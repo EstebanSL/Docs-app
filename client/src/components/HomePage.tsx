@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   FileIcon,
   PlusIcon,
-  SearchIcon,
   EditIcon,
   CheckIcon,
   XIcon,

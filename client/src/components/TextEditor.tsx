@@ -4,9 +4,6 @@ import { FC, useCallback, useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
 import { Delta } from "quill/core";
 import { useParams } from "react-router";
-import { Button } from "./ui/button";
-import { SaveIcon } from "lucide-react";
-import { Input } from "./ui/input";
 
 const TOOLBAR_OPTIONS = [
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
