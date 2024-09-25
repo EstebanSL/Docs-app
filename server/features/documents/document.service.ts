@@ -9,7 +9,7 @@ async function get(id: string) {
   return Documents.findOne({ _id: id });
 }
 
-async function create(data) {
+async function create(data: any) {
   return new Documents(data).save();
 }
 
