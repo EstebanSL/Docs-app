@@ -31,8 +31,10 @@ export default function Component() {
   const [documents, setDocuments] = useState<Document[]>([]);
 
   const getDocumentsList = async () => {
+    console.log(`${import.meta.env.VITE_BACKEND_URL}/documents`);
+    
     // Fetch documents from server
-    const response = await fetch(`${process.env.BACKEND_URL}/documents`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/documents`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +56,7 @@ export default function Component() {
     }));
     
     const response = await fetch(
-      `${process.env.BACKEND_URL}/documents/${document._id}`,
+      `${import.meta.env.BACKEND_URL}/documents/${document._id}`,
       {
         method: "PUT",
         headers: {
