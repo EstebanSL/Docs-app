@@ -1,13 +1,9 @@
-const { connectDB } = require('./config/configDB')
+import { connectDB } from './config/configDB';
 
-const express = require("express");
-const cors = require("cors");
-const { documents } = require("./features/documents");
-const {
-  get,
-  update,
-  create,
-} = require("./features/documents/document.service");
+import express from "express";
+import cors from "cors";
+import { documents } from "./features/documents";
+import { get, update, create } from "./features/documents/document.service";
 
 connectDB();
 
