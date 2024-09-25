@@ -32,7 +32,7 @@ export default function Component() {
 
   const getDocumentsList = async () => {
     // Fetch documents from server
-    const response = await fetch("http://localhost:3000/documents", {
+    const response = await fetch("https://docs-app-back.netlify.app/documents", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export default function Component() {
     }));
     
     const response = await fetch(
-      `http://localhost:3000/documents/${document._id}`,
+      `https://docs-app-back.netlify.app/documents/${document._id}`,
       {
         method: "PUT",
         headers: {

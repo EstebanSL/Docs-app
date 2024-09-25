@@ -1,9 +1,13 @@
-import { connectDB } from './config/configDB';
+const { connectDB } = require('./config/configDB')
 
-import express from "express";
-import cors from "cors";
-import { documents } from "./features/documents";
-import { get, update, create } from "./features/documents/document.service";
+const express = require("express");
+const cors = require("cors");
+const { documents } = require("./features/documents");
+const {
+  get,
+  update,
+  create,
+} = require("./features/documents/document.service");
 
 connectDB();
 
@@ -22,7 +26,7 @@ app.listen(port, () => {
 
 const io = require("socket.io")(process.env.SOCKET_PORT || 3001, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
